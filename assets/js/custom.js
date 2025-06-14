@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIyZGMzYmEwNjc0Yzg0NTQ4YTQxNTc4ZDY2ZjBmNjRmYiIsImlhdCI6MTcyMDY5OTU2MSwiZXhwIjoyMDM2MDU5NTYxfQ.4vMNKmoj7-5XD2UcOZ6v52_FXwne1HYJzvBZvAOJkM8';
-    const wsUrl = 'wss://kukzjhumsnjlw8xzts2cke6uwbbfy8bi.ui.nabu.casa/api/websocket';
+    const token = 'insertToken';
+    const wsUrl = 'insertWebsocket';
 
     const pritochkiButton = document.querySelector('button[data-toggle="#pritochki"]');
     const vityajkiButton = document.querySelector('button[data-toggle="#vityajki"]');
