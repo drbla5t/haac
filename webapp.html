@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>webapp20</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/styles.css?v2.0.9">
+</head>
+
+<body>
+    <div class="container mainbackground_conteiner" id="display-menu-main">
+        <div class="upmenu-card">
+            <div class="display-information__wrapper">
+              <span class="text updata-value-information" id="outdoor-temp">Loading...</span>
+              <small class="small-text text">Уличная температура</small></div>
+            <div class="display-information__wrapper">
+              <span class="text updata-value-information" id="heat-carrier-temperature">Загрузка...</span>
+              <small class="small-text text">Теплоноситель</small></div>
+        </div>
+        <div class="updata-card__information__buttons">
+          <button class="btn neumorphic-btn" type="button" data-toggle="#pritochki">Приточки</button>
+          <button class="btn neumorphic-btn" type="button" data-toggle="#vityajki">Вытяжки</button></div>
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="buttons-menu-card-p">
+        <div class="buttons-menu-card">
+            <div id="p01-button" data-type="p" data-number="01" class="buttons-menu-card-buttons mode_normal">
+              <span class="text updata-value-information">P01</span>
+              <span class="text updata-value-information">Автомойка</span>
+              <small id="p01_mode" class="small-text text">Loading..</small>
+              <div class="small-text-group">
+                <small id="p01_actual_temp" class="small-text text">Loading..</small>
+                <small id="p01_temperatura_v_kanale" class="small-text text">Loading..</small></div>
+              <div class="small-text-group">
+                <small id="p01_ustavka_fan" class="small-text text">Loading..</small>
+                <small id="p01_chastota" class="small-text text">Loading..</small></div></div>
+            <div id="p02-button" data-type="p" data-number="02" class="buttons-menu-card-buttons mode_normal">
+              <span class="text updata-value-information">P02</span>
+              <span class="text updata-value-information">1 Этаж</span>
+              <small id="p02_mode" class="small-text text">Loading..</small>
+              <div class="small-text-group">
+                <small id="p02_actual_temp" class="small-text text">Loading..</small>
+                <small id="p02_temperatura_v_kanale" class="small-text text">Loading..</small></div>
+              <div class="small-text-group">
+                <small id="p02_ustavka_fan" class="small-text text">Loading..</small>
+                <small id="p02_chastota" class="small-text text">Loading..</small></div></div>
+            <div id="p03-button" data-type="p" data-number="03" class="buttons-menu-card-buttons mode_normal">
+              <span class="text updata-value-information">P03</span>
+              <span class="text updata-value-information">Офис Детская</span>
+              <small id="p03_mode" class="small-text text">Loading..</small>
+              <div class="small-text-group">
+                <small id="p03_actual_temp" class="small-text text">Loading..</small>
+                <small id="p03_temperatura_v_kanale" class="small-text text">Loading..</small></div>
+              <div class="small-text-group">
+                <small id="p03_ustavka_fan" class="small-text text">Loading..</small>
+                <small id="p03_chastota" class="small-text text">Loading..</small></div></div>
+            <div id="p04-button" data-type="p" data-number="04" class="buttons-menu-card-buttons mode_normal">
+              <span class="text updata-value-information">P04</span>
+              <span class="text updata-value-information">Ресторан</span>
+              <small id="p04_mode" class="small-text text">Loading..</small>
+              <div class="small-text-group">
+                <small id="p04_actual_temp" class="small-text text">Loading..</small>
+                <small id="p04_temperatura_v_kanale" class="small-text text">Loading..</small></div>
+              <div class="small-text-group">
+                <small id="p04_ustavka_fan" class="small-text text">Loading..</small>
+                <small id="p04_chastota" class="small-text text">Loading..</small></div></div>
+            <div id="p05-button" data-type="p" data-number="05" class="buttons-menu-card-buttons mode_normal">
+              <span class="text updata-value-information">P05</span>
+              <span class="text updata-value-information">Ресторан</span>
+              <small id="p05_mode" class="small-text text">Loading..</small>
+              <div class="small-text-group">
+                <small id="p05_actual_temp" class="small-text text">Loading..</small>
+                <small id="p05_temperatura_v_kanale" class="small-text text">Loading..</small></div>
+              <div class="small-text-group">
+                <small id="p05_ustavka_fan" class="small-text text">Loading..</small>
+                <small id="p05_chastota" class="small-text text">Loading..</small></div></div>
+            <div id="p06-button" data-type="p" data-number="06" class="buttons-menu-card-buttons mode_normal">
+              <span class="text updata-value-information">P06</span>
+              <span class="text updata-value-information">Офис</span>
+              <small id="p06_mode" class="small-text text">Loading..</small>
+              <div class="small-text-group">
+                <small id="p06_actual_temp" class="small-text text">Loading..</small>
+                <small id="p06_temperatura_v_kanale" class="small-text text">Loading..</small></div>
+              <div class="small-text-group">
+                <small id="p06_ustavka_fan" class="small-text text">Loading..</small>
+                <small id="p06_chastota" class="small-text text">Loading..</small></div></div>
+            <div id="p07-button" data-type="p" data-number="07" class="buttons-menu-card-buttons mode_normal">
+              <span class="text updata-value-information">P07</span>
+              <span class="text updata-value-information">Ресторан</span>
+              <small id="p07_mode" class="small-text text">Loading..</small>
+              <div class="small-text-group">
+                <small id="p07_actual_temp" class="small-text text">Loading..</small>
+                <small id="p07_temperatura_v_kanale" class="small-text text">Loading..</small></div>
+              <div class="small-text-group">
+                <small id="p07_ustavka_fan" class="small-text text">Loading..</small>
+                <small id="p07_chastota" class="small-text text">Loading..</small></div></div>
+            <div id="p08-button" data-type="p" data-number="08" class="buttons-menu-card-buttons mode_normal">
+              <span class="text updata-value-information">P08</span>
+              <span class="text updata-value-information">Кухня</span>
+              <small id="p08_mode" class="small-text text">Loading..</small>
+              <div class="small-text-group">
+                <small id="p08_actual_temp" class="small-text text">Loading..</small>
+                <small id="p08_temperatura_v_kanale" class="small-text text">Loading..</small></div>
+              <div class="small-text-group">
+                <small id="p08_ustavka_fan" class="small-text text">Loading..</small>
+                <small id="p08_chastota" class="small-text text">Loading..</small></div></div>
+            <div id="p10-button" data-type="p" data-number="10" class="buttons-menu-card-buttons mode_normal">
+              <span class="text updata-value-information">P10</span>
+              <span class="text updata-value-information">ГорХол цех</span>
+              <small id="p10_mode" class="small-text text">Loading..</small>
+              <div class="small-text-group">
+                <small id="p10_actual_temp" class="small-text text">Loading..</small>
+                <small id="p10_temperatura_v_kanale" class="small-text text">Loading..</small></div>
+              <div class="small-text-group">
+                <small id="p10_ustavka_fan" class="small-text text">Loading..</small>
+                <small id="p10_chastota" class="small-text text">Loading..</small></div></div>
+            <div id="p11-button" data-type="p" data-number="11" class="buttons-menu-card-buttons mode_normal">
+              <span class="text updata-value-information">P11</span>
+              <span class="text updata-value-information">Летник</span>
+              <small id="p11_mode" class="small-text text">Loading..</small>
+              <div class="small-text-group">
+                <small id="p11_actual_temp" class="small-text text">Loading..</small>
+                <small id="p11_temperatura_v_kanale" class="small-text text">Loading..</small></div>
+              <div class="small-text-group">
+                <small id="p11_ustavka_fan" class="small-text text">Loading..</small>
+                <small id="p11_chastota" class="small-text text">Loading..</small></div></div>
+        </div>
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="buttons-menu-card-v">
+        <div class="buttons-menu-card">
+            <div id="v01-button" data-type="v" data-number="01" class="buttons-menu-card-buttons mode_normal"><span class="text updata-value-information">V01</span><small id="v01_current" class="small-text text">Загрузка..</small><small id="v01_freq" class="small-text text">Загрузка..</small><small id="v01_alarmsword" class="small-text text">Загрузка..</small></div>
+            <div id="v02-button" data-type="v" data-number="02" class="buttons-menu-card-buttons mode_normal"><span class="text updata-value-information">V02</span><small id="v02_current" class="small-text text">Загрузка..</small><small id="v02_freq" class="small-text text">Загрузка..</small><small id="v02_alarmsword" class="small-text text">Загрузка..</small></div>
+            <div id="v03-button" data-type="v" data-number="03" class="buttons-menu-card-buttons mode_normal"><span class="text updata-value-information">V03</span><small id="v03_current" class="small-text text">Загрузка..</small><small id="v03_freq" class="small-text text">Загрузка..</small><small id="v03_alarmsword" class="small-text text">Загрузка..</small></div>
+            <div id="v04-button" data-type="v" data-number="04" class="buttons-menu-card-buttons mode_normal"><span class="text updata-value-information">V04</span><small id="v04_current" class="small-text text">Загрузка..</small><small id="v04_freq" class="small-text text">Загрузка..</small><small id="v04_alarmsword" class="small-text text">Загрузка..</small></div>
+            <div id="v05-button" data-type="v" data-number="05" class="buttons-menu-card-buttons mode_normal"><span class="text updata-value-information">V05</span><small id="v05_current" class="small-text text">Загрузка..</small><small id="v05_freq" class="small-text text">Загрузка..</small><small id="v05_alarmsword" class="small-text text">Загрузка..</small></div>
+            <div id="v06-button" data-type="v" data-number="06" class="buttons-menu-card-buttons mode_normal"><span class="text updata-value-information">V06</span><small id="v06_current" class="small-text text">Загрузка..</small><small id="v06_freq" class="small-text text">Загрузка..</small><small id="v06_alarmsword" class="small-text text">Загрузка..</small></div>
+            <div id="v07-button" data-type="v" data-number="07" class="buttons-menu-card-buttons mode_normal"><span class="text updata-value-information">V07</span><small id="v07_current" class="small-text text">Загрузка..</small><small id="v07_freq" class="small-text text">Загрузка..</small><small id="v07_alarmsword" class="small-text text">Загрузка..</small></div>
+            <div id="v08-button" data-type="v" data-number="08" class="buttons-menu-card-buttons mode_normal"><span class="text updata-value-information">V08</span><small id="v08_current" class="small-text text">Загрузка..</small><small id="v08_freq" class="small-text text">Загрузка..</small><small id="v08_alarmsword" class="small-text text">Загрузка..</small></div>
+            <div id="v09-button" data-type="v" data-number="09" class="buttons-menu-card-buttons mode_normal"><span class="text updata-value-information">V09</span><small id="v09_current" class="small-text text">Загрузка..</small><small id="v09_freq" class="small-text text">Загрузка..</small><small id="v09_alarmsword" class="small-text text">Загрузка..</small></div>
+            <div id="v10-button" data-type="v" data-number="10" class="buttons-menu-card-buttons mode_normal"><span class="text updata-value-information">V10</span><small id="v10_current" class="small-text text">Загрузка..</small><small id="v10_freq" class="small-text text">Загрузка..</small><small id="v10_alarmsword" class="small-text text">Загрузка..</small></div>
+            <div id="v18-button" data-type="v" data-number="18" class="buttons-menu-card-buttons mode_normal"><span class="text updata-value-information">V18</span><small id="v18_current" class="small-text text">Загрузка..</small><small id="v18_freq" class="small-text text">Загрузка..</small><small id="v18_alarmsword" class="small-text text">Загрузка..</small></div>
+            <div id="v19-button" data-type="v" data-number="19" class="buttons-menu-card-buttons mode_normal"><span class="text updata-value-information">V19</span><small id="v19_current" class="small-text text">Загрузка..</small><small id="v19_freq" class="small-text text">Загрузка..</small><small id="v19_alarmsword" class="small-text text">Загрузка..</small></div>
+            <div id="v20-button" data-type="v" data-number="20" class="buttons-menu-card-buttons mode_normal"><span class="text updata-value-information">V20</span><small id="v20_current" class="small-text text">Загрузка..</small><small id="v20_freq" class="small-text text">Загрузка..</small><small id="v20_alarmsword" class="small-text text">Загрузка..</small></div>
+            <div id="v21-button" data-type="v" data-number="21" class="buttons-menu-card-buttons mode_normal"><span class="text updata-value-information">V21</span><small id="v21_current" class="small-text text">Загрузка..</small><small id="v21_freq" class="small-text text">Загрузка..</small><small id="v21_alarmsword" class="small-text text">Загрузка..</small></div>
+            <div id="v22-button" data-type="v" data-number="21" class="buttons-menu-card-buttons mode_normal"><span class="text updata-value-information">V22</span><small id="v22_current" class="small-text text">Загрузка..</small><small id="v22_freq" class="small-text text">Загрузка..</small><small id="v22_alarmsword" class="small-text text">Загрузка..</small></div>
+
+        </div>
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="display-menu-v01">
+      <div class="wrap__backbutton">
+        <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Назад</button>
+         <div class="display-backbutton__wrapper">
+           <span class="text updata-value-information">V01</span>
+          </div>
+         <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Настройки</button>
+       </div>
+       <div class="upmenu-card">
+            <div class="display-information__wrapper"><span id="v01_freq_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Частота</small></div>
+            <div class="display-information__wrapper"><span id="v01_current_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ток</small></div>
+            <div class="display-information__wrapper"><span id="v01_coil_mode" class="text updata-value-information">Loading...</span><small class="small-text text">Режим</small></div>
+            <div class="display-information__wrapper"><span id="v01_status_buscontrol" class="text updata-value-information">Loading...</span><small class="small-text text">Управление</small></div>
+            <div class="display-information__wrapper"><span id="v01_status_running" class="text updata-value-information">Loading...</span><small class="small-text text">Статус</small></div>
+            <div class="display-information__wrapper"><span id="v01_status_voltageexceeded" class="text updata-value-information">Loading...</span><small class="small-text text">Напряжение</small></div>
+            <div class="display-information__wrapper"><span id="V01_alarmsword_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ошибки</small></div>
+            <div class="display-information__wrapper"><span id="v01_warnings_word" class="text updata-value-information">Loading...</span><small class="small-text text">Предупреждения</small></div>
+            <div class="display-information__wrapper"><span id="v01_status_warning" class="text updata-value-information">Loading...</span><small class="small-text text">Статус Ошибок</small></div>
+            <div class="display-information__wrapper"><span id="v01_status_thermalwarning" class="text updata-value-information">Loading...</span><small class="small-text text">Тепловое предупреждение</small></div>
+        </div>
+        <!-- Переключатель ONOFF START-->
+        <div class="wrap__toggle">
+          <div class="wrap__toggle--name text"><span></span><span>Вкл/Выкл</span></div>
+          <div class="wrap__toggle--toggler text">
+            <label class="form-label" for="v01_onoff_toggle"><input type="checkbox" class="checkBox" id="v01_onoff_toggle"><span></span></label>
+          </div>
+        </div>
+        <!-- Переключатель ONOFF END-->
+        <div class="wrap__toggle radio_button">
+ 		       <div class="form_mode_group text">
+ 			          <div class="form_mode_group-item"><input id="v01-radio-mode-local" type="radio" name="v01-radio-mode" value="1" checked><label for="v01-radio-mode-local">Ручное</label></div>
+ 			          <div class="form_mode_group-item"><input id="v01-radio-mode-bus" type="radio" name="v01-radio-mode" value="2"><label for="v01-radio-mode-bus">По шине</label></div>
+ 		          </div>
+ 	       </div>
+        <!-- Слайдер Частоты START-->
+        <div class="wrap__slider">
+          <span class="slider-label">Частота: <span class="slider-value">75</span><span class="slider-unit">Hz</span></span>
+          <form>
+            <input type="range" min="0" max="100" value="75" list="l" class="slider">
+          </form>
+        </div>
+        <!-- Слайдер частоты END-->
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="display-menu-v02">
+      <div class="wrap__backbutton">
+        <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Назад</button>
+         <div class="display-backbutton__wrapper">
+           <span class="text updata-value-information">V02</span>
+          </div>
+         <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Настройки</button>
+       </div>
+       <div class="upmenu-card">
+            <div class="display-information__wrapper"><span id="v02_freq_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Частота</small></div>
+            <div class="display-information__wrapper"><span id="v02_current_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ток</small></div>
+            <div class="display-information__wrapper"><span id="v02_coil_mode" class="text updata-value-information">Loading...</span><small class="small-text text">Режим</small></div>
+            <div class="display-information__wrapper"><span id="v02_status_buscontrol" class="text updata-value-information">Loading...</span><small class="small-text text">Управление</small></div>
+            <div class="display-information__wrapper"><span id="v02_status_running" class="text updata-value-information">Loading...</span><small class="small-text text">Статус</small></div>
+            <div class="display-information__wrapper"><span id="v02_status_voltageexceeded" class="text updata-value-information">Loading...</span><small class="small-text text">Напряжение</small></div>
+            <div class="display-information__wrapper"><span id="v02_alarmsword_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ошибки</small></div>
+            <div class="display-information__wrapper"><span id="v02_warnings_word" class="text updata-value-information">Loading...</span><small class="small-text text">Предупреждения</small></div>
+            <div class="display-information__wrapper"><span id="v02_status_warning" class="text updata-value-information">Loading...</span><small class="small-text text">Статус Ошибок</small></div>
+            <div class="display-information__wrapper"><span id="v02_status_thermalwarning" class="text updata-value-information">Loading...</span><small class="small-text text">Тепловое предупреждение</small></div>
+        </div>
+        <!-- Переключатель ONOFF START-->
+        <div class="wrap__toggle">
+          <div class="wrap__toggle--name text"><span></span><span>Вкл/Выкл</span></div>
+          <div class="wrap__toggle--toggler text">
+            <label class="form-label" for="v02_onoff_toggle"><input type="checkbox" class="checkBox" id="v02_onoff_toggle"><span></span></label>
+          </div>
+        </div>
+        <!-- Переключатель ONOFF END-->
+        <div class="wrap__toggle radio_button">
+           <div class="form_mode_group text">
+                <div class="form_mode_group-item"><input id="v02-radio-mode-local" type="radio" name="v02-radio-mode" value="1" checked><label for="v02-radio-mode-local">Ручное</label></div>
+                <div class="form_mode_group-item"><input id="v02-radio-mode-bus" type="radio" name="v02-radio-mode" value="2"><label for="v02-radio-mode-bus">По шине</label></div>
+              </div>
+         </div>
+        <!-- Слайдер Частоты START-->
+        <div class="wrap__slider">
+          <span class="slider-label">Частота: <span class="slider-value">75</span><span class="slider-unit">Hz</span></span>
+          <form>
+            <input type="range" min="0" max="100" value="75" list="l" class="slider">
+          </form>
+        </div>
+        <!-- Слайдер частоты END-->
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="display-menu-v03">
+      <div class="wrap__backbutton">
+        <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Назад</button>
+         <div class="display-backbutton__wrapper">
+           <span class="text updata-value-information">V03</span>
+          </div>
+         <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Настройки</button>
+       </div>
+       <div class="upmenu-card">
+            <div class="display-information__wrapper"><span id="v03_freq_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Частота</small></div>
+            <div class="display-information__wrapper"><span id="v03_current_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ток</small></div>
+            <div class="display-information__wrapper"><span id="v03_coil_mode" class="text updata-value-information">Loading...</span><small class="small-text text">Режим</small></div>
+            <div class="display-information__wrapper"><span id="v03_status_buscontrol" class="text updata-value-information">Loading...</span><small class="small-text text">Управление</small></div>
+            <div class="display-information__wrapper"><span id="v03_status_running" class="text updata-value-information">Loading...</span><small class="small-text text">Статус</small></div>
+            <div class="display-information__wrapper"><span id="v03_status_voltageexceeded" class="text updata-value-information">Loading...</span><small class="small-text text">Напряжение</small></div>
+            <div class="display-information__wrapper"><span id="v03_alarmsword_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ошибки</small></div>
+            <div class="display-information__wrapper"><span id="v03_warnings_word" class="text updata-value-information">Loading...</span><small class="small-text text">Предупреждения</small></div>
+            <div class="display-information__wrapper"><span id="v03_status_warning" class="text updata-value-information">Loading...</span><small class="small-text text">Статус Ошибок</small></div>
+            <div class="display-information__wrapper"><span id="v03_status_thermalwarning" class="text updata-value-information">Loading...</span><small class="small-text text">Тепловое предупреждение</small></div>
+        </div>
+        <!-- Переключатель ONOFF START-->
+        <div class="wrap__toggle">
+          <div class="wrap__toggle--name text"><span></span><span>Вкл/Выкл</span></div>
+          <div class="wrap__toggle--toggler text">
+            <label class="form-label" for="v03_onoff_toggle"><input type="checkbox" class="checkBox" id="v03_onoff_toggle"><span></span></label>
+          </div>
+        </div>
+        <!-- Переключатель ONOFF END-->
+        <div class="wrap__toggle radio_button">
+           <div class="form_mode_group text">
+                <div class="form_mode_group-item"><input id="v03-radio-mode-local" type="radio" name="v03-radio-mode" value="1" checked><label for="v03-radio-mode-local">Ручное</label></div>
+                <div class="form_mode_group-item"><input id="v03-radio-mode-bus" type="radio" name="v03-radio-mode" value="2"><label for="v03-radio-mode-bus">По шине</label></div>
+              </div>
+         </div>
+        <!-- Слайдер Частоты START-->
+        <div class="wrap__slider">
+          <span class="slider-label">Частота: <span class="slider-value">75</span><span class="slider-unit">Hz</span></span>
+          <form>
+            <input type="range" min="0" max="100" value="75" list="l" class="slider">
+          </form>
+        </div>
+        <!-- Слайдер частоты END-->
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="display-menu-v04">
+      <div class="wrap__backbutton">
+        <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Назад</button>
+         <div class="display-backbutton__wrapper">
+           <span class="text updata-value-information">V04</span>
+          </div>
+         <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Настройки</button>
+       </div>
+       <div class="upmenu-card">
+            <div class="display-information__wrapper"><span id="v04_freq_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Частота</small></div>
+            <div class="display-information__wrapper"><span id="v04_current_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ток</small></div>
+            <div class="display-information__wrapper"><span id="v04_coil_mode" class="text updata-value-information">Loading...</span><small class="small-text text">Режим</small></div>
+            <div class="display-information__wrapper"><span id="v04_status_buscontrol" class="text updata-value-information">Loading...</span><small class="small-text text">Управление</small></div>
+            <div class="display-information__wrapper"><span id="v04_status_running" class="text updata-value-information">Loading...</span><small class="small-text text">Статус</small></div>
+            <div class="display-information__wrapper"><span id="v04_status_voltageexceeded" class="text updata-value-information">Loading...</span><small class="small-text text">Напряжение</small></div>
+            <div class="display-information__wrapper"><span id="v04_alarmsword_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ошибки</small></div>
+            <div class="display-information__wrapper"><span id="v04_warnings_word" class="text updata-value-information">Loading...</span><small class="small-text text">Предупреждения</small></div>
+            <div class="display-information__wrapper"><span id="v04_status_warning" class="text updata-value-information">Loading...</span><small class="small-text text">Статус Ошибок</small></div>
+            <div class="display-information__wrapper"><span id="v04_status_thermalwarning" class="text updata-value-information">Loading...</span><small class="small-text text">Тепловое предупреждение</small></div>
+        </div>
+        <!-- Переключатель ONOFF START-->
+        <div class="wrap__toggle">
+          <div class="wrap__toggle--name text"><span></span><span>Вкл/Выкл</span></div>
+          <div class="wrap__toggle--toggler text">
+            <label class="form-label" for="v04_onoff_toggle"><input type="checkbox" class="checkBox" id="v04_onoff_toggle"><span></span></label>
+          </div>
+        </div>
+        <!-- Переключатель ONOFF END-->
+        <div class="wrap__toggle radio_button">
+           <div class="form_mode_group text">
+                <div class="form_mode_group-item"><input id="v04-radio-mode-local" type="radio" name="v04-radio-mode" value="1" checked><label for="v04-radio-mode-local">Ручное</label></div>
+                <div class="form_mode_group-item"><input id="v04-radio-mode-bus" type="radio" name="v04-radio-mode" value="2"><label for="v04-radio-mode-bus">По шине</label></div>
+              </div>
+         </div>
+        <!-- Слайдер Частоты START-->
+        <div class="wrap__slider">
+          <span class="slider-label">Частота: <span class="slider-value">75</span><span class="slider-unit">Hz</span></span>
+          <form>
+            <input type="range" min="0" max="100" value="75" list="l" class="slider">
+          </form>
+        </div>
+        <!-- Слайдер частоты END-->
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="display-menu-v05">
+      <div class="wrap__backbutton">
+        <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Назад</button>
+         <div class="display-backbutton__wrapper">
+           <span class="text updata-value-information">V05</span>
+          </div>
+         <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Настройки</button>
+       </div>
+       <div class="upmenu-card">
+            <div class="display-information__wrapper"><span id="v05_freq_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Частота</small></div>
+            <div class="display-information__wrapper"><span id="v05_current_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ток</small></div>
+            <div class="display-information__wrapper"><span id="v05_coil_mode" class="text updata-value-information">Loading...</span><small class="small-text text">Режим</small></div>
+            <div class="display-information__wrapper"><span id="v05_status_buscontrol" class="text updata-value-information">Loading...</span><small class="small-text text">Управление</small></div>
+            <div class="display-information__wrapper"><span id="v05_status_running" class="text updata-value-information">Loading...</span><small class="small-text text">Статус</small></div>
+            <div class="display-information__wrapper"><span id="v05_status_voltageexceeded" class="text updata-value-information">Loading...</span><small class="small-text text">Напряжение</small></div>
+            <div class="display-information__wrapper"><span id="v05_alarmsword_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ошибки</small></div>
+            <div class="display-information__wrapper"><span id="v05_warnings_word" class="text updata-value-information">Loading...</span><small class="small-text text">Предупреждения</small></div>
+            <div class="display-information__wrapper"><span id="v05_status_warning" class="text updata-value-information">Loading...</span><small class="small-text text">Статус Ошибок</small></div>
+            <div class="display-information__wrapper"><span id="v05_status_thermalwarning" class="text updata-value-information">Loading...</span><small class="small-text text">Тепловое предупреждение</small></div>
+        </div>
+        <!-- Переключатель ONOFF START-->
+        <div class="wrap__toggle">
+          <div class="wrap__toggle--name text"><span></span><span>Вкл/Выкл</span></div>
+          <div class="wrap__toggle--toggler text">
+            <label class="form-label" for="v05_onoff_toggle"><input type="checkbox" class="checkBox" id="v05_onoff_toggle"><span></span></label>
+          </div>
+        </div>
+        <!-- Переключатель ONOFF END-->
+        <div class="wrap__toggle radio_button">
+           <div class="form_mode_group text">
+                <div class="form_mode_group-item"><input id="v05-radio-mode-local" type="radio" name="v05-radio-mode" value="1" checked><label for="v05-radio-mode-local">Ручное</label></div>
+                <div class="form_mode_group-item"><input id="v05-radio-mode-bus" type="radio" name="v05-radio-mode" value="2"><label for="v05-radio-mode-bus">По шине</label></div>
+              </div>
+         </div>
+        <!-- Слайдер Частоты START-->
+        <div class="wrap__slider">
+          <span class="slider-label">Частота: <span class="slider-value">75</span><span class="slider-unit">Hz</span></span>
+          <form>
+            <input type="range" min="0" max="100" value="75" list="l" class="slider">
+          </form>
+        </div>
+        <!-- Слайдер частоты END-->
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="display-menu-v06">
+      <div class="wrap__backbutton">
+        <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Назад</button>
+         <div class="display-backbutton__wrapper">
+           <span class="text updata-value-information">V06</span>
+          </div>
+         <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Настройки</button>
+       </div>
+       <div class="upmenu-card">
+            <div class="display-information__wrapper"><span id="v06_freq_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Частота</small></div>
+            <div class="display-information__wrapper"><span id="v06_current_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ток</small></div>
+            <div class="display-information__wrapper"><span id="v06_coil_mode" class="text updata-value-information">Loading...</span><small class="small-text text">Режим</small></div>
+            <div class="display-information__wrapper"><span id="v06_status_buscontrol" class="text updata-value-information">Loading...</span><small class="small-text text">Управление</small></div>
+            <div class="display-information__wrapper"><span id="v06_status_running" class="text updata-value-information">Loading...</span><small class="small-text text">Статус</small></div>
+            <div class="display-information__wrapper"><span id="v06_status_voltageexceeded" class="text updata-value-information">Loading...</span><small class="small-text text">Напряжение</small></div>
+            <div class="display-information__wrapper"><span id="v06_alarmsword_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ошибки</small></div>
+            <div class="display-information__wrapper"><span id="v06_warnings_word" class="text updata-value-information">Loading...</span><small class="small-text text">Предупреждения</small></div>
+            <div class="display-information__wrapper"><span id="v06_status_warning" class="text updata-value-information">Loading...</span><small class="small-text text">Статус Ошибок</small></div>
+            <div class="display-information__wrapper"><span id="v06_status_thermalwarning" class="text updata-value-information">Loading...</span><small class="small-text text">Тепловое предупреждение</small></div>
+        </div>
+        <!-- Переключатель ONOFF START-->
+        <div class="wrap__toggle">
+          <div class="wrap__toggle--name text"><span></span><span>Вкл/Выкл</span></div>
+          <div class="wrap__toggle--toggler text">
+            <label class="form-label" for="v06_onoff_toggle"><input type="checkbox" class="checkBox" id="v06_onoff_toggle"><span></span></label>
+          </div>
+        </div>
+        <!-- Переключатель ONOFF END-->
+        <div class="wrap__toggle radio_button">
+           <div class="form_mode_group text">
+                <div class="form_mode_group-item"><input id="v06-radio-mode-local" type="radio" name="v06-radio-mode" value="1" checked><label for="v06-radio-mode-local">Ручное</label></div>
+                <div class="form_mode_group-item"><input id="v06-radio-mode-bus" type="radio" name="v06-radio-mode" value="2"><label for="v06-radio-mode-bus">По шине</label></div>
+              </div>
+         </div>
+        <!-- Слайдер Частоты START-->
+        <div class="wrap__slider">
+          <span class="slider-label">Частота: <span class="slider-value">75</span><span class="slider-unit">Hz</span></span>
+          <form>
+            <input type="range" min="0" max="100" value="75" list="l" class="slider">
+          </form>
+        </div>
+        <!-- Слайдер частоты END-->
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="display-menu-v07">
+      <div class="wrap__backbutton">
+        <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Назад</button>
+         <div class="display-backbutton__wrapper">
+           <span class="text updata-value-information">V07</span>
+          </div>
+         <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Настройки</button>
+       </div>
+       <div class="upmenu-card">
+            <div class="display-information__wrapper"><span id="v07_freq_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Частота</small></div>
+            <div class="display-information__wrapper"><span id="v07_current_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ток</small></div>
+            <div class="display-information__wrapper"><span id="v07_coil_mode" class="text updata-value-information">Loading...</span><small class="small-text text">Режим</small></div>
+            <div class="display-information__wrapper"><span id="v07_status_buscontrol" class="text updata-value-information">Loading...</span><small class="small-text text">Управление</small></div>
+            <div class="display-information__wrapper"><span id="v07_status_running" class="text updata-value-information">Loading...</span><small class="small-text text">Статус</small></div>
+            <div class="display-information__wrapper"><span id="v07_status_voltageexceeded" class="text updata-value-information">Loading...</span><small class="small-text text">Напряжение</small></div>
+            <div class="display-information__wrapper"><span id="v07_alarmsword_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ошибки</small></div>
+            <div class="display-information__wrapper"><span id="v07_warnings_word" class="text updata-value-information">Loading...</span><small class="small-text text">Предупреждения</small></div>
+            <div class="display-information__wrapper"><span id="v07_status_warning" class="text updata-value-information">Loading...</span><small class="small-text text">Статус Ошибок</small></div>
+            <div class="display-information__wrapper"><span id="v07_status_thermalwarning" class="text updata-value-information">Loading...</span><small class="small-text text">Тепловое предупреждение</small></div>
+        </div>
+        <!-- Переключатель ONOFF START-->
+        <div class="wrap__toggle">
+          <div class="wrap__toggle--name text"><span></span><span>Вкл/Выкл</span></div>
+          <div class="wrap__toggle--toggler text">
+            <label class="form-label" for="v07_onoff_toggle"><input type="checkbox" class="checkBox" id="v07_onoff_toggle"><span></span></label>
+          </div>
+        </div>
+        <!-- Переключатель ONOFF END-->
+        <div class="wrap__toggle radio_button">
+           <div class="form_mode_group text">
+                <div class="form_mode_group-item"><input id="v07-radio-mode-local" type="radio" name="v07-radio-mode" value="1" checked><label for="v07-radio-mode-local">Ручное</label></div>
+                <div class="form_mode_group-item"><input id="v07-radio-mode-bus" type="radio" name="v07-radio-mode" value="2"><label for="v07-radio-mode-bus">По шине</label></div>
+              </div>
+         </div>
+        <!-- Слайдер Частоты START-->
+        <div class="wrap__slider">
+          <span class="slider-label">Частота: <span class="slider-value">75</span><span class="slider-unit">Hz</span></span>
+          <form>
+            <input type="range" min="0" max="100" value="75" list="l" class="slider">
+          </form>
+        </div>
+        <!-- Слайдер частоты END-->
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="display-menu-v08">
+      <div class="wrap__backbutton">
+        <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Назад</button>
+         <div class="display-backbutton__wrapper">
+           <span class="text updata-value-information">V08</span>
+          </div>
+         <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Настройки</button>
+       </div>
+       <div class="upmenu-card">
+            <div class="display-information__wrapper"><span id="v08_freq_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Частота</small></div>
+            <div class="display-information__wrapper"><span id="v08_current_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ток</small></div>
+            <div class="display-information__wrapper"><span id="v08_coil_mode" class="text updata-value-information">Loading...</span><small class="small-text text">Режим</small></div>
+            <div class="display-information__wrapper"><span id="v08_status_buscontrol" class="text updata-value-information">Loading...</span><small class="small-text text">Управление</small></div>
+            <div class="display-information__wrapper"><span id="v08_status_running" class="text updata-value-information">Loading...</span><small class="small-text text">Статус</small></div>
+            <div class="display-information__wrapper"><span id="v08_status_voltageexceeded" class="text updata-value-information">Loading...</span><small class="small-text text">Напряжение</small></div>
+            <div class="display-information__wrapper"><span id="v08_alarmsword_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ошибки</small></div>
+            <div class="display-information__wrapper"><span id="v08_warnings_word" class="text updata-value-information">Loading...</span><small class="small-text text">Предупреждения</small></div>
+            <div class="display-information__wrapper"><span id="v08_status_warning" class="text updata-value-information">Loading...</span><small class="small-text text">Статус Ошибок</small></div>
+            <div class="display-information__wrapper"><span id="v08_status_thermalwarning" class="text updata-value-information">Loading...</span><small class="small-text text">Тепловое предупреждение</small></div>
+        </div>
+        <!-- Переключатель ONOFF START-->
+        <div class="wrap__toggle">
+          <div class="wrap__toggle--name text"><span></span><span>Вкл/Выкл</span></div>
+          <div class="wrap__toggle--toggler text">
+            <label class="form-label" for="v08_onoff_toggle"><input type="checkbox" class="checkBox" id="v08_onoff_toggle"><span></span></label>
+          </div>
+        </div>
+        <!-- Переключатель ONOFF END-->
+        <div class="wrap__toggle radio_button">
+           <div class="form_mode_group text">
+                <div class="form_mode_group-item"><input id="v08-radio-mode-local" type="radio" name="v08-radio-mode" value="1" checked><label for="v08-radio-mode-local">Ручное</label></div>
+                <div class="form_mode_group-item"><input id="v08-radio-mode-bus" type="radio" name="v08-radio-mode" value="2"><label for="v08-radio-mode-bus">По шине</label></div>
+              </div>
+         </div>
+        <!-- Слайдер Частоты START-->
+        <div class="wrap__slider">
+          <span class="slider-label">Частота: <span class="slider-value">75</span><span class="slider-unit">Hz</span></span>
+          <form>
+            <input type="range" min="0" max="100" value="75" list="l" class="slider">
+          </form>
+        </div>
+        <!-- Слайдер частоты END-->
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="display-menu-v09">
+      <div class="wrap__backbutton">
+        <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Назад</button>
+         <div class="display-backbutton__wrapper">
+           <span class="text updata-value-information">V09</span>
+          </div>
+         <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Настройки</button>
+       </div>
+       <div class="upmenu-card">
+            <div class="display-information__wrapper"><span id="v09_freq_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Частота</small></div>
+            <div class="display-information__wrapper"><span id="v09_current_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ток</small></div>
+            <div class="display-information__wrapper"><span id="v09_coil_mode" class="text updata-value-information">Loading...</span><small class="small-text text">Режим</small></div>
+            <div class="display-information__wrapper"><span id="v09_status_buscontrol" class="text updata-value-information">Loading...</span><small class="small-text text">Управление</small></div>
+            <div class="display-information__wrapper"><span id="v09_status_running" class="text updata-value-information">Loading...</span><small class="small-text text">Статус</small></div>
+            <div class="display-information__wrapper"><span id="v09_status_voltageexceeded" class="text updata-value-information">Loading...</span><small class="small-text text">Напряжение</small></div>
+            <div class="display-information__wrapper"><span id="v09_alarmsword_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ошибки</small></div>
+            <div class="display-information__wrapper"><span id="v09_warnings_word" class="text updata-value-information">Loading...</span><small class="small-text text">Предупреждения</small></div>
+            <div class="display-information__wrapper"><span id="v09_status_warning" class="text updata-value-information">Loading...</span><small class="small-text text">Статус Ошибок</small></div>
+            <div class="display-information__wrapper"><span id="v09_status_thermalwarning" class="text updata-value-information">Loading...</span><small class="small-text text">Тепловое предупреждение</small></div>
+        </div>
+        <!-- Переключатель ONOFF START-->
+        <div class="wrap__toggle">
+          <div class="wrap__toggle--name text"><span></span><span>Вкл/Выкл</span></div>
+          <div class="wrap__toggle--toggler text">
+            <label class="form-label" for="v09_onoff_toggle"><input type="checkbox" class="checkBox" id="v09_onoff_toggle"><span></span></label>
+          </div>
+        </div>
+        <!-- Переключатель ONOFF END-->
+        <div class="wrap__toggle radio_button">
+           <div class="form_mode_group text">
+                <div class="form_mode_group-item"><input id="v09-radio-mode-local" type="radio" name="v09-radio-mode" value="1" checked><label for="v09-radio-mode-local">Ручное</label></div>
+                <div class="form_mode_group-item"><input id="v09-radio-mode-bus" type="radio" name="v09-radio-mode" value="2"><label for="v09-radio-mode-bus">По шине</label></div>
+              </div>
+         </div>
+        <!-- Слайдер Частоты START-->
+        <div class="wrap__slider">
+          <span class="slider-label">Частота: <span class="slider-value">75</span><span class="slider-unit">Hz</span></span>
+          <form>
+            <input type="range" min="0" max="100" value="75" list="l" class="slider">
+          </form>
+        </div>
+        <!-- Слайдер частоты END-->
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="display-menu-v10">
+      <div class="wrap__backbutton">
+        <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Назад</button>
+         <div class="display-backbutton__wrapper">
+           <span class="text updata-value-information">V10</span>
+          </div>
+         <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Настройки</button>
+       </div>
+       <div class="upmenu-card">
+            <div class="display-information__wrapper"><span id="v10_freq_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Частота</small></div>
+            <div class="display-information__wrapper"><span id="v10_current_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ток</small></div>
+            <div class="display-information__wrapper"><span id="v10_coil_mode" class="text updata-value-information">Loading...</span><small class="small-text text">Режим</small></div>
+            <div class="display-information__wrapper"><span id="v10_status_buscontrol" class="text updata-value-information">Loading...</span><small class="small-text text">Управление</small></div>
+            <div class="display-information__wrapper"><span id="v10_status_running" class="text updata-value-information">Loading...</span><small class="small-text text">Статус</small></div>
+            <div class="display-information__wrapper"><span id="v10_status_voltageexceeded" class="text updata-value-information">Loading...</span><small class="small-text text">Напряжение</small></div>
+            <div class="display-information__wrapper"><span id="v10_alarmsword_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ошибки</small></div>
+            <div class="display-information__wrapper"><span id="v10_warnings_word" class="text updata-value-information">Loading...</span><small class="small-text text">Предупреждения</small></div>
+            <div class="display-information__wrapper"><span id="v10_status_warning" class="text updata-value-information">Loading...</span><small class="small-text text">Статус Ошибок</small></div>
+            <div class="display-information__wrapper"><span id="v10_status_thermalwarning" class="text updata-value-information">Loading...</span><small class="small-text text">Тепловое предупреждение</small></div>
+        </div>
+        <!-- Переключатель ONOFF START-->
+        <div class="wrap__toggle">
+          <div class="wrap__toggle--name text"><span></span><span>Вкл/Выкл</span></div>
+          <div class="wrap__toggle--toggler text">
+            <label class="form-label" for="v10_onoff_toggle"><input type="checkbox" class="checkBox" id="v10_onoff_toggle"><span></span></label>
+          </div>
+        </div>
+        <!-- Переключатель ONOFF END-->
+        <div class="wrap__toggle radio_button">
+           <div class="form_mode_group text">
+                <div class="form_mode_group-item"><input id="v10-radio-mode-local" type="radio" name="v10-radio-mode" value="1" checked><label for="v10-radio-mode-local">Ручное</label></div>
+                <div class="form_mode_group-item"><input id="v10-radio-mode-bus" type="radio" name="v10-radio-mode" value="2"><label for="v10-radio-mode-bus">По шине</label></div>
+              </div>
+         </div>
+        <!-- Слайдер Частоты START-->
+        <div class="wrap__slider">
+          <span class="slider-label">Частота: <span class="slider-value">75</span><span class="slider-unit">Hz</span></span>
+          <form>
+            <input type="range" min="0" max="100" value="75" list="l" class="slider">
+          </form>
+        </div>
+        <!-- Слайдер частоты END-->
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="display-menu-v18">
+      <div class="wrap__backbutton">
+        <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Назад</button>
+         <div class="display-backbutton__wrapper">
+           <span class="text updata-value-information">V18</span>
+          </div>
+         <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Настройки</button>
+       </div>
+       <div class="upmenu-card">
+            <div class="display-information__wrapper"><span id="v18_freq_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Частота</small></div>
+            <div class="display-information__wrapper"><span id="v18_current_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ток</small></div>
+            <div class="display-information__wrapper"><span id="v18_coil_mode" class="text updata-value-information">Loading...</span><small class="small-text text">Режим</small></div>
+            <div class="display-information__wrapper"><span id="v18_status_buscontrol" class="text updata-value-information">Loading...</span><small class="small-text text">Управление</small></div>
+            <div class="display-information__wrapper"><span id="v18_status_running" class="text updata-value-information">Loading...</span><small class="small-text text">Статус</small></div>
+            <div class="display-information__wrapper"><span id="v18_status_voltageexceeded" class="text updata-value-information">Loading...</span><small class="small-text text">Напряжение</small></div>
+            <div class="display-information__wrapper"><span id="v18_alarmsword_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ошибки</small></div>
+            <div class="display-information__wrapper"><span id="v18_warnings_word" class="text updata-value-information">Loading...</span><small class="small-text text">Предупреждения</small></div>
+            <div class="display-information__wrapper"><span id="v18_status_warning" class="text updata-value-information">Loading...</span><small class="small-text text">Статус Ошибок</small></div>
+            <div class="display-information__wrapper"><span id="v18_status_thermalwarning" class="text updata-value-information">Loading...</span><small class="small-text text">Тепловое предупреждение</small></div>
+        </div>
+        <!-- Переключатель ONOFF START-->
+        <div class="wrap__toggle">
+          <div class="wrap__toggle--name text"><span></span><span>Вкл/Выкл</span></div>
+          <div class="wrap__toggle--toggler text">
+            <label class="form-label" for="v18_onoff_toggle"><input type="checkbox" class="checkBox" id="v18_onoff_toggle"><span></span></label>
+          </div>
+        </div>
+        <!-- Переключатель ONOFF END-->
+        <div class="wrap__toggle radio_button">
+           <div class="form_mode_group text">
+                <div class="form_mode_group-item"><input id="v18-radio-mode-local" type="radio" name="v18-radio-mode" value="1" checked><label for="v18-radio-mode-local">Ручное</label></div>
+                <div class="form_mode_group-item"><input id="v18-radio-mode-bus" type="radio" name="v18-radio-mode" value="2"><label for="v18-radio-mode-bus">По шине</label></div>
+              </div>
+         </div>
+        <!-- Слайдер Частоты START-->
+        <div class="wrap__slider">
+          <span class="slider-label">Частота: <span class="slider-value">75</span><span class="slider-unit">Hz</span></span>
+          <form>
+            <input type="range" min="0" max="100" value="75" list="l" class="slider">
+          </form>
+        </div>
+        <!-- Слайдер частоты END-->
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="display-menu-v19">
+      <div class="wrap__backbutton">
+        <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Назад</button>
+         <div class="display-backbutton__wrapper">
+           <span class="text updata-value-information">V19</span>
+          </div>
+         <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Настройки</button>
+       </div>
+       <div class="upmenu-card">
+            <div class="display-information__wrapper"><span id="v19_freq_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Частота</small></div>
+            <div class="display-information__wrapper"><span id="v19_current_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ток</small></div>
+            <div class="display-information__wrapper"><span id="v19_coil_mode" class="text updata-value-information">Loading...</span><small class="small-text text">Режим</small></div>
+            <div class="display-information__wrapper"><span id="v19_status_buscontrol" class="text updata-value-information">Loading...</span><small class="small-text text">Управление</small></div>
+            <div class="display-information__wrapper"><span id="v19_status_running" class="text updata-value-information">Loading...</span><small class="small-text text">Статус</small></div>
+            <div class="display-information__wrapper"><span id="v19_status_voltageexceeded" class="text updata-value-information">Loading...</span><small class="small-text text">Напряжение</small></div>
+            <div class="display-information__wrapper"><span id="v19_alarmsword_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ошибки</small></div>
+            <div class="display-information__wrapper"><span id="v19_warnings_word" class="text updata-value-information">Loading...</span><small class="small-text text">Предупреждения</small></div>
+            <div class="display-information__wrapper"><span id="v19_status_warning" class="text updata-value-information">Loading...</span><small class="small-text text">Статус Ошибок</small></div>
+            <div class="display-information__wrapper"><span id="v19_status_thermalwarning" class="text updata-value-information">Loading...</span><small class="small-text text">Тепловое предупреждение</small></div>
+        </div>
+        <!-- Переключатель ONOFF START-->
+        <div class="wrap__toggle">
+          <div class="wrap__toggle--name text"><span></span><span>Вкл/Выкл</span></div>
+          <div class="wrap__toggle--toggler text">
+            <label class="form-label" for="v19_onoff_toggle"><input type="checkbox" class="checkBox" id="v19_onoff_toggle"><span></span></label>
+          </div>
+        </div>
+        <!-- Переключатель ONOFF END-->
+        <div class="wrap__toggle radio_button">
+           <div class="form_mode_group text">
+                <div class="form_mode_group-item"><input id="v19-radio-mode-local" type="radio" name="v19-radio-mode" value="1" checked><label for="v19-radio-mode-local">Ручное</label></div>
+                <div class="form_mode_group-item"><input id="v19-radio-mode-bus" type="radio" name="v19-radio-mode" value="2"><label for="v19-radio-mode-bus">По шине</label></div>
+              </div>
+         </div>
+        <!-- Слайдер Частоты START-->
+        <div class="wrap__slider">
+          <span class="slider-label">Частота: <span class="slider-value">75</span><span class="slider-unit">Hz</span></span>
+          <form>
+            <input type="range" min="0" max="100" value="75" list="l" class="slider">
+          </form>
+        </div>
+        <!-- Слайдер частоты END-->
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="display-menu-v20">
+      <div class="wrap__backbutton">
+        <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Назад</button>
+         <div class="display-backbutton__wrapper">
+           <span class="text updata-value-information">V20</span>
+          </div>
+         <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Настройки</button>
+       </div>
+       <div class="upmenu-card">
+            <div class="display-information__wrapper"><span id="v20_freq_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Частота</small></div>
+            <div class="display-information__wrapper"><span id="v20_current_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ток</small></div>
+            <div class="display-information__wrapper"><span id="v20_coil_mode" class="text updata-value-information">Loading...</span><small class="small-text text">Режим</small></div>
+            <div class="display-information__wrapper"><span id="v20_status_buscontrol" class="text updata-value-information">Loading...</span><small class="small-text text">Управление</small></div>
+            <div class="display-information__wrapper"><span id="v20_status_running" class="text updata-value-information">Loading...</span><small class="small-text text">Статус</small></div>
+            <div class="display-information__wrapper"><span id="v20_status_voltageexceeded" class="text updata-value-information">Loading...</span><small class="small-text text">Напряжение</small></div>
+            <div class="display-information__wrapper"><span id="v20_alarmsword_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ошибки</small></div>
+            <div class="display-information__wrapper"><span id="v20_warnings_word" class="text updata-value-information">Loading...</span><small class="small-text text">Предупреждения</small></div>
+            <div class="display-information__wrapper"><span id="v20_status_warning" class="text updata-value-information">Loading...</span><small class="small-text text">Статус Ошибок</small></div>
+            <div class="display-information__wrapper"><span id="v20_status_thermalwarning" class="text updata-value-information">Loading...</span><small class="small-text text">Тепловое предупреждение</small></div>
+        </div>
+        <!-- Переключатель ONOFF START-->
+        <div class="wrap__toggle">
+          <div class="wrap__toggle--name text"><span></span><span>Вкл/Выкл</span></div>
+          <div class="wrap__toggle--toggler text">
+            <label class="form-label" for="v20_onoff_toggle"><input type="checkbox" class="checkBox" id="v20_onoff_toggle"><span></span></label>
+          </div>
+        </div>
+        <!-- Переключатель ONOFF END-->
+        <div class="wrap__toggle radio_button">
+           <div class="form_mode_group text">
+                <div class="form_mode_group-item"><input id="v20-radio-mode-local" type="radio" name="v20-radio-mode" value="1" checked><label for="v20-radio-mode-local">Ручное</label></div>
+                <div class="form_mode_group-item"><input id="v20-radio-mode-bus" type="radio" name="v20-radio-mode" value="2"><label for="v20-radio-mode-bus">По шине</label></div>
+              </div>
+         </div>
+        <!-- Слайдер Частоты START-->
+        <div class="wrap__slider">
+          <span class="slider-label">Частота: <span class="slider-value">75</span><span class="slider-unit">Hz</span></span>
+          <form>
+            <input type="range" min="0" max="100" value="75" list="l" class="slider">
+          </form>
+        </div>
+        <!-- Слайдер частоты END-->
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="display-menu-v21">
+      <div class="wrap__backbutton">
+        <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Назад</button>
+         <div class="display-backbutton__wrapper">
+           <span class="text updata-value-information">V21</span>
+          </div>
+         <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Настройки</button>
+       </div>
+       <div class="upmenu-card">
+            <div class="display-information__wrapper"><span id="v21_freq_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Частота</small></div>
+            <div class="display-information__wrapper"><span id="v21_current_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ток</small></div>
+            <div class="display-information__wrapper"><span id="v21_coil_mode" class="text updata-value-information">Loading...</span><small class="small-text text">Режим</small></div>
+            <div class="display-information__wrapper"><span id="v21_status_buscontrol" class="text updata-value-information">Loading...</span><small class="small-text text">Управление</small></div>
+            <div class="display-information__wrapper"><span id="v21_status_running" class="text updata-value-information">Loading...</span><small class="small-text text">Статус</small></div>
+            <div class="display-information__wrapper"><span id="v21_status_voltageexceeded" class="text updata-value-information">Loading...</span><small class="small-text text">Напряжение</small></div>
+            <div class="display-information__wrapper"><span id="v21_alarmsword_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ошибки</small></div>
+            <div class="display-information__wrapper"><span id="v21_warnings_word" class="text updata-value-information">Loading...</span><small class="small-text text">Предупреждения</small></div>
+            <div class="display-information__wrapper"><span id="v21_status_warning" class="text updata-value-information">Loading...</span><small class="small-text text">Статус Ошибок</small></div>
+            <div class="display-information__wrapper"><span id="v21_status_thermalwarning" class="text updata-value-information">Loading...</span><small class="small-text text">Тепловое предупреждение</small></div>
+        </div>
+        <!-- Переключатель ONOFF START-->
+        <div class="wrap__toggle">
+          <div class="wrap__toggle--name text"><span></span><span>Вкл/Выкл</span></div>
+          <div class="wrap__toggle--toggler text">
+            <label class="form-label" for="v21_onoff_toggle"><input type="checkbox" class="checkBox" id="v21_onoff_toggle"><span></span></label>
+          </div>
+        </div>
+        <!-- Переключатель ONOFF END-->
+        <div class="wrap__toggle radio_button">
+           <div class="form_mode_group text">
+                <div class="form_mode_group-item"><input id="v21-radio-mode-local" type="radio" name="v21-radio-mode" value="1" checked><label for="v21-radio-mode-local">Ручное</label></div>
+                <div class="form_mode_group-item"><input id="v21-radio-mode-bus" type="radio" name="v21-radio-mode" value="2"><label for="v21-radio-mode-bus">По шине</label></div>
+              </div>
+         </div>
+        <!-- Слайдер Частоты START-->
+        <div class="wrap__slider">
+          <span class="slider-label">Частота: <span class="slider-value">75</span><span class="slider-unit">Hz</span></span>
+          <form>
+            <input type="range" min="0" max="100" value="75" list="l" class="slider">
+          </form>
+        </div>
+        <!-- Слайдер частоты END-->
+    </div>
+
+    <div class="container mainbackground_conteiner hidden" id="display-menu-p01">
+       <!-- Кнопки управления Start-->
+       <div class="wrap__backbutton">
+	        <button class="btn back-btn" type="button" data-toggle="#back_pritochki">Назад</button>
+          <div class="display-backbutton__wrapper">
+	           <span class="text updata-value-information">P01</span>
+           </div>
+           <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Настройки</button>
+         </div>
+        <!-- Кнопки управления END-->
+         <!-- Информационное окно START-->
+       <div class="upmenu-card hide">
+           <div class="display-information__wrapper"><span id="p01_temperatura_naruzhnego_vozdukha_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уличная</small></div>
+           <div class="display-information__wrapper"><span id="p01_temperatura_v_kanale_diw" class="text updata-value-information">Loading...</span><small class="small-text text">В канале</small></div>
+           <div class="display-information__wrapper"><span id="p01_temperatura_pritoka_vody_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Подача</small></div>
+           <div class="display-information__wrapper"><span id="p01_temperatura_obratnoi_vody_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Обратка</small></div>
+           <div class="display-information__wrapper"><span id="p01_workmode_status_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Режим</small></div>
+           <div class="display-information__wrapper"><span id="p01_error_status_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ошибки</small></div>
+           <div class="display-information__wrapper"><span id="p01_actualtemp_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уставка</small></div>
+           <div class="display-information__wrapper"><span id="p01_ustavka_speedfan_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уставка</small></div>
+           <div class="display-information__wrapper"><span id="p01_nagrev_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Нагрев</small></div>
+           <div class="display-information__wrapper"><span id="p01_okhlazhdenie_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Охлаждение</small></div>
+           <div class="display-information__wrapper"><span id="p01_sila_toka_diw" class="text updata-value-information">Loading...</span><small class="small-text text">FC ток</small></div>
+           <div class="display-information__wrapper"><span id="p01_skorost_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Обороты</small></div>
+           <div class="display-information__wrapper"><span id="p01_chastota_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Частота</small></div>
+           <div class="display-information__wrapper"><span id="p01_moshchnost_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Мощность</small></div>
+           <div class="display-information__wrapper"><span id="p01_voltazh_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Вольтаж</small></div>
+           <div class="display-information__wrapper"><span id="p01_narabotka_fansupply_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Наработка</small></div>
+       </div>
+        <!-- Информационное окно END-->
+         <!-- Переключатель ONOFF START-->
+       <div class="wrap__toggle">
+           <div class="wrap__toggle--name text"><span></span><span>Вкл/Выкл</span></div>
+           <div class="wrap__toggle--toggler text"><label class="form-label" for="p01_onoff_toggle"><input type="checkbox" class="checkBox" id="p01_onoff_toggle"><span></span></label></div></div>
+            <!-- Переключатель ONOFF END-->
+             <!-- Выбор режимов Start -->
+       <div class="wrap__toggle radio_button">
+           <div class="form_mode_group text">
+                <div class="form_mode_group-item"><input id="p01-radio-mode-eco" type="radio" name="p01-radio-mode" value="1" checked><label for="p01-radio-mode-eco">Эко</label></div>
+                <div class="form_mode_group-item"><input id="p01-radio-mode-comfort" type="radio" name="p01-radio-mode" value="2"><label for="p01-radio-mode-comfort">Комфорт</label></div>
+                <div class="form_mode_group-item"><input id="p01-radio-mode-optimal" type="radio" name="p01-radio-mode" value="3"><label for="p01-radio-mode-optimal">Оптимальный</label></div>
+              </div>
+         </div>
+          <!-- Выбор режимов END -->
+      <!-- Слайдер Скорости START-->
+        <div class="wrap__slider">
+            <span class="slider-label">Скорость: <span class="slider-value">75</span><span class="slider-unit">%</span></span>
+            <form>
+              <input type="range" min="0" max="100" value="75" list="l" class="slider">
+            </form>
+          </div>
+           <!-- Слайдер Скорости END-->
+      <!-- Слайдер температуры START-->
+        <div class="wrap__slider">
+            <span class="slider-label">Температура: <span class="slider-value">25</span><span class="slider-unit">°С</span></span>
+            <form>
+              <input type="range" min="15" max="30" value="25" list="l" class="slider">
+            </form>
+          </div>
+
+
+
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="display-menu-p02">
+         <!-- Кнопки управления Start-->
+         <div class="wrap__backbutton">
+  	        <button class="btn back-btn" type="button" data-toggle="#back_pritochki">Назад</button>
+            <div class="display-backbutton__wrapper">
+  	           <span class="text updata-value-information">P02</span>
+             </div>
+             <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Настройки</button>
+           </div>
+          <!-- Кнопки управления END-->
+           <!-- Информационное окно START-->
+         <div class="upmenu-card hide">
+             <div class="display-information__wrapper"><span id="p02_temperatura_naruzhnego_vozdukha_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уличная</small></div>
+             <div class="display-information__wrapper"><span id="p02_temperatura_v_kanale_diw" class="text updata-value-information">Loading...</span><small class="small-text text">В канале</small></div>
+             <div class="display-information__wrapper"><span id="p02_temperatura_pritoka_vody_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Подача</small></div>
+             <div class="display-information__wrapper"><span id="p02_temperatura_obratnoi_vody_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Обратка</small></div>
+             <div class="display-information__wrapper"><span id="p02_workmode_status_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Режим</small></div>
+             <div class="display-information__wrapper"><span id="p02_error_status_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ошибки</small></div>
+             <div class="display-information__wrapper"><span id="p02_actualtemp_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уставка</small></div>
+             <div class="display-information__wrapper"><span id="p02_ustavka_speedfan_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уставка</small></div>
+             <div class="display-information__wrapper"><span id="p02_nagrev_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Нагрев</small></div>
+             <div class="display-information__wrapper"><span id="p02_okhlazhdenie_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Охлаждение</small></div>
+             <div class="display-information__wrapper"><span id="p02_sila_toka_diw" class="text updata-value-information">Loading...</span><small class="small-text text">FC ток</small></div>
+             <div class="display-information__wrapper"><span id="p02_skorost_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Обороты</small></div>
+             <div class="display-information__wrapper"><span id="p02_chastota_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Частота</small></div>
+             <div class="display-information__wrapper"><span id="p02_moshchnost_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Мощность</small></div>
+             <div class="display-information__wrapper"><span id="p02_voltazh_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Вольтаж</small></div>
+             <div class="display-information__wrapper"><span id="p02_narabotka_fansupply_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Наработка</small></div>
+         </div>
+          <!-- Информационное окно END-->
+           <!-- Переключатель ONOFF START-->
+         <div class="wrap__toggle">
+             <div class="wrap__toggle--name text"><span></span><span>Вкл/Выкл</span></div>
+             <div class="wrap__toggle--toggler text"><label class="form-label" for="p02_onoff_toggle"><input type="checkbox" class="checkBox" id="p02_onoff_toggle"><span></span></label></div></div>
+              <!-- Переключатель ONOFF END-->
+               <!-- Выбор режимов Start -->
+         <div class="wrap__toggle radio_button">
+             <div class="form_mode_group text">
+                  <div class="form_mode_group-item"><input id="p02-radio-mode-eco" type="radio" name="p02-radio-mode" value="1" checked><label for="p02-radio-mode-eco">Эко</label></div>
+                  <div class="form_mode_group-item"><input id="p02-radio-mode-comfort" type="radio" name="p02-radio-mode" value="2"><label for="p02-radio-mode-comfort">Комфорт</label></div>
+                  <div class="form_mode_group-item"><input id="p02-radio-mode-optimal" type="radio" name="p02-radio-mode" value="3"><label for="p02-radio-mode-optimal">Оптимальный</label></div>
+                </div>
+           </div>
+            <!-- Выбор режимов END -->
+        <!-- Слайдер Скорости START-->
+          <div class="wrap__slider">
+              <span class="slider-label">Скорость: <span class="slider-value">75</span><span class="slider-unit">%</span></span>
+              <form>
+                <input type="range" min="0" max="100" value="75" list="l" class="slider">
+              </form>
+            </div>
+             <!-- Слайдер Скорости END-->
+        <!-- Слайдер температуры START-->
+          <div class="wrap__slider">
+              <span class="slider-label">Температура: <span class="slider-value">25</span><span class="slider-unit">°С</span></span>
+              <form>
+                <input type="range" min="15" max="30" value="25" list="l" class="slider">
+              </form>
+            </div>
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="display-menu-p03">
+       <!-- Кнопки управления Start-->
+       <div class="wrap__backbutton">
+	        <button class="btn back-btn" type="button" data-toggle="#back_pritochki">Назад</button>
+          <div class="display-backbutton__wrapper">
+	           <span class="text updata-value-information">P03</span>
+           </div>
+           <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Настройки</button>
+         </div>
+        <!-- Кнопки управления END-->
+         <!-- Информационное окно START-->
+       <div class="upmenu-card hide">
+           <div class="display-information__wrapper"><span id="p03_temperatura_naruzhnego_vozdukha_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уличная</small></div>
+           <div class="display-information__wrapper"><span id="p03_temperatura_v_kanale_diw" class="text updata-value-information">Loading...</span><small class="small-text text">В канале</small></div>
+           <div class="display-information__wrapper"><span id="p03_temperatura_pritoka_vody_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Подача</small></div>
+           <div class="display-information__wrapper"><span id="p03_temperatura_obratnoi_vody_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Обратка</small></div>
+           <div class="display-information__wrapper"><span id="p03_workmode_status_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Режим</small></div>
+           <div class="display-information__wrapper"><span id="p03_error_status_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ошибки</small></div>
+           <div class="display-information__wrapper"><span id="p03_actualtemp_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уставка</small></div>
+           <div class="display-information__wrapper"><span id="p03_ustavka_speedfan_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уставка</small></div>
+           <div class="display-information__wrapper"><span id="p03_nagrev_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Нагрев</small></div>
+           <div class="display-information__wrapper"><span id="p03_okhlazhdenie_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Охлаждение</small></div>
+           <div class="display-information__wrapper"><span id="p03_sila_toka_diw" class="text updata-value-information">Loading...</span><small class="small-text text">FC ток</small></div>
+           <div class="display-information__wrapper"><span id="p03_skorost_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Обороты</small></div>
+           <div class="display-information__wrapper"><span id="p03_chastota_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Частота</small></div>
+           <div class="display-information__wrapper"><span id="p03_moshchnost_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Мощность</small></div>
+           <div class="display-information__wrapper"><span id="p03_voltazh_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Вольтаж</small></div>
+           <div class="display-information__wrapper"><span id="p03_narabotka_fansupply_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Наработка</small></div>
+       </div>
+        <!-- Информационное окно END-->
+         <!-- Переключатель ONOFF START-->
+       <div class="wrap__toggle">
+           <div class="wrap__toggle--name text"><span></span><span>Вкл/Выкл</span></div>
+           <div class="wrap__toggle--toggler text"><label class="form-label" for="p03_onoff_toggle"><input type="checkbox" class="checkBox" id="p03_onoff_toggle"><span></span></label></div></div>
+            <!-- Переключатель ONOFF END-->
+             <!-- Выбор режимов Start -->
+       <div class="wrap__toggle radio_button">
+           <div class="form_mode_group text">
+                <div class="form_mode_group-item"><input id="p03-radio-mode-eco" type="radio" name="p03-radio-mode" value="1" checked><label for="p03-radio-mode-eco">Эко</label></div>
+                <div class="form_mode_group-item"><input id="p03-radio-mode-comfort" type="radio" name="p03-radio-mode" value="2"><label for="p03-radio-mode-comfort">Комфорт</label></div>
+                <div class="form_mode_group-item"><input id="p03-radio-mode-optimal" type="radio" name="p03-radio-mode" value="3"><label for="p03-radio-mode-optimal">Оптимальный</label></div>
+              </div>
+         </div>
+          <!-- Выбор режимов END -->
+      <!-- Слайдер Скорости START-->
+        <div class="wrap__slider">
+            <span class="slider-label">Скорость: <span class="slider-value">75</span><span class="slider-unit">%</span></span>
+            <form>
+              <input type="range" min="0" max="100" value="75" list="l" class="slider">
+            </form>
+          </div>
+           <!-- Слайдер Скорости END-->
+      <!-- Слайдер температуры START-->
+        <div class="wrap__slider">
+            <span class="slider-label">Температура: <span class="slider-value">25</span><span class="slider-unit">°С</span></span>
+            <form>
+              <input type="range" min="15" max="30" value="25" list="l" class="slider">
+            </form>
+          </div>
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="display-menu-p04">
+       <!-- Кнопки управления Start-->
+       <div class="wrap__backbutton">
+	        <button class="btn back-btn" type="button" data-toggle="#back_pritochki">Назад</button>
+          <div class="display-backbutton__wrapper">
+	           <span class="text updata-value-information">P04</span>
+           </div>
+           <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Настройки</button>
+         </div>
+        <!-- Кнопки управления END-->
+         <!-- Информационное окно START-->
+       <div class="upmenu-card hide">
+           <div class="display-information__wrapper"><span id="p04_temperatura_naruzhnego_vozdukha_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уличная</small></div>
+           <div class="display-information__wrapper"><span id="p04_temperatura_v_kanale_diw" class="text updata-value-information">Loading...</span><small class="small-text text">В канале</small></div>
+           <div class="display-information__wrapper"><span id="p04_temperatura_pritoka_vody_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Подача</small></div>
+           <div class="display-information__wrapper"><span id="p04_temperatura_obratnoi_vody_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Обратка</small></div>
+           <div class="display-information__wrapper"><span id="p04_workmode_status_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Режим</small></div>
+           <div class="display-information__wrapper"><span id="p04_error_status_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ошибки</small></div>
+           <div class="display-information__wrapper"><span id="p04_actualtemp_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уставка</small></div>
+           <div class="display-information__wrapper"><span id="p04_ustavka_speedfan_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уставка</small></div>
+           <div class="display-information__wrapper"><span id="p04_nagrev_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Нагрев</small></div>
+           <div class="display-information__wrapper"><span id="p04_okhlazhdenie_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Охлаждение</small></div>
+           <div class="display-information__wrapper"><span id="p04_sila_toka_diw" class="text updata-value-information">Loading...</span><small class="small-text text">FC ток</small></div>
+           <div class="display-information__wrapper"><span id="p04_skorost_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Обороты</small></div>
+           <div class="display-information__wrapper"><span id="p04_chastota_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Частота</small></div>
+           <div class="display-information__wrapper"><span id="p04_moshchnost_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Мощность</small></div>
+           <div class="display-information__wrapper"><span id="p04_voltazh_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Вольтаж</small></div>
+           <div class="display-information__wrapper"><span id="p04_narabotka_fansupply_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Наработка</small></div>
+       </div>
+        <!-- Информационное окно END-->
+         <!-- Переключатель ONOFF START-->
+       <div class="wrap__toggle">
+           <div class="wrap__toggle--name text"><span></span><span>Вкл/Выкл</span></div>
+           <div class="wrap__toggle--toggler text"><label class="form-label" for="p04_onoff_toggle"><input type="checkbox" class="checkBox" id="p04_onoff_toggle"><span></span></label></div></div>
+            <!-- Переключатель ONOFF END-->
+             <!-- Выбор режимов Start -->
+       <div class="wrap__toggle radio_button">
+           <div class="form_mode_group text">
+                <div class="form_mode_group-item"><input id="p04-radio-mode-eco" type="radio" name="p04-radio-mode" value="1" checked><label for="p04-radio-mode-eco">Эко</label></div>
+                <div class="form_mode_group-item"><input id="p04-radio-mode-comfort" type="radio" name="p04-radio-mode" value="2"><label for="p04-radio-mode-comfort">Комфорт</label></div>
+                <div class="form_mode_group-item"><input id="p04-radio-mode-optimal" type="radio" name="p04-radio-mode" value="3"><label for="p04-radio-mode-optimal">Оптимальный</label></div>
+              </div>
+         </div>
+          <!-- Выбор режимов END -->
+      <!-- Слайдер Скорости START-->
+        <div class="wrap__slider">
+            <span class="slider-label">Скорость: <span class="slider-value">75</span><span class="slider-unit">%</span></span>
+            <form>
+              <input type="range" min="0" max="100" value="75" list="l" class="slider">
+            </form>
+          </div>
+           <!-- Слайдер Скорости END-->
+      <!-- Слайдер температуры START-->
+        <div class="wrap__slider">
+            <span class="slider-label">Температура: <span class="slider-value">25</span><span class="slider-unit">°С</span></span>
+            <form>
+              <input type="range" min="15" max="30" value="25" list="l" class="slider">
+            </form>
+          </div>
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="display-menu-p05">
+       <!-- Кнопки управления Start-->
+       <div class="wrap__backbutton">
+	        <button class="btn back-btn" type="button" data-toggle="#back_pritochki">Назад</button>
+          <div class="display-backbutton__wrapper">
+	           <span class="text updata-value-information">P05</span>
+           </div>
+           <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Настройки</button>
+         </div>
+        <!-- Кнопки управления END-->
+         <!-- Информационное окно START-->
+       <div class="upmenu-card hide">
+           <div class="display-information__wrapper"><span id="p05_temperatura_naruzhnego_vozdukha_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уличная</small></div>
+           <div class="display-information__wrapper"><span id="p05_temperatura_v_kanale_diw" class="text updata-value-information">Loading...</span><small class="small-text text">В канале</small></div>
+           <div class="display-information__wrapper"><span id="p05_temperatura_pritoka_vody_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Подача</small></div>
+           <div class="display-information__wrapper"><span id="p05_temperatura_obratnoi_vody_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Обратка</small></div>
+           <div class="display-information__wrapper"><span id="p05_workmode_status_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Режим</small></div>
+           <div class="display-information__wrapper"><span id="p05_error_status_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ошибки</small></div>
+           <div class="display-information__wrapper"><span id="p05_actualtemp_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уставка</small></div>
+           <div class="display-information__wrapper"><span id="p05_ustavka_speedfan_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уставка</small></div>
+           <div class="display-information__wrapper"><span id="p05_nagrev_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Нагрев</small></div>
+           <div class="display-information__wrapper"><span id="p05_okhlazhdenie_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Охлаждение</small></div>
+           <div class="display-information__wrapper"><span id="p05_sila_toka_diw" class="text updata-value-information">Loading...</span><small class="small-text text">FC ток</small></div>
+           <div class="display-information__wrapper"><span id="p05_skorost_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Обороты</small></div>
+           <div class="display-information__wrapper"><span id="p05_chastota_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Частота</small></div>
+           <div class="display-information__wrapper"><span id="p05_moshchnost_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Мощность</small></div>
+           <div class="display-information__wrapper"><span id="p05_voltazh_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Вольтаж</small></div>
+           <div class="display-information__wrapper"><span id="p05_narabotka_fansupply_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Наработка</small></div>
+       </div>
+        <!-- Информационное окно END-->
+         <!-- Переключатель ONOFF START-->
+       <div class="wrap__toggle">
+           <div class="wrap__toggle--name text"><span></span><span>Вкл/Выкл</span></div>
+           <div class="wrap__toggle--toggler text"><label class="form-label" for="p05_onoff_toggle"><input type="checkbox" class="checkBox" id="p05_onoff_toggle"><span></span></label></div></div>
+            <!-- Переключатель ONOFF END-->
+             <!-- Выбор режимов Start -->
+       <div class="wrap__toggle radio_button">
+           <div class="form_mode_group text">
+                <div class="form_mode_group-item"><input id="p05-radio-mode-eco" type="radio" name="p05-radio-mode" value="1" checked><label for="p05-radio-mode-eco">Эко</label></div>
+                <div class="form_mode_group-item"><input id="p05-radio-mode-comfort" type="radio" name="p05-radio-mode" value="2"><label for="p05-radio-mode-comfort">Комфорт</label></div>
+                <div class="form_mode_group-item"><input id="p05-radio-mode-optimal" type="radio" name="p05-radio-mode" value="3"><label for="p05-radio-mode-optimal">Оптимальный</label></div>
+              </div>
+         </div>
+          <!-- Выбор режимов END -->
+      <!-- Слайдер Скорости START-->
+        <div class="wrap__slider">
+            <span class="slider-label">Скорость: <span class="slider-value">75</span><span class="slider-unit">%</span></span>
+            <form>
+              <input type="range" min="0" max="100" value="75" list="l" class="slider">
+            </form>
+          </div>
+           <!-- Слайдер Скорости END-->
+      <!-- Слайдер температуры START-->
+        <div class="wrap__slider">
+            <span class="slider-label">Температура: <span class="slider-value">25</span><span class="slider-unit">°С</span></span>
+            <form>
+              <input type="range" min="15" max="30" value="25" list="l" class="slider">
+            </form>
+          </div>
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="display-menu-p06">
+       <!-- Кнопки управления Start-->
+       <div class="wrap__backbutton">
+	        <button class="btn back-btn" type="button" data-toggle="#back_pritochki">Назад</button>
+          <div class="display-backbutton__wrapper">
+	           <span class="text updata-value-information">P06</span>
+           </div>
+           <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Настройки</button>
+         </div>
+        <!-- Кнопки управления END-->
+         <!-- Информационное окно START-->
+       <div class="upmenu-card hide">
+           <div class="display-information__wrapper"><span id="p06_temperatura_naruzhnego_vozdukha_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уличная</small></div>
+           <div class="display-information__wrapper"><span id="p06_temperatura_v_kanale_diw" class="text updata-value-information">Loading...</span><small class="small-text text">В канале</small></div>
+           <div class="display-information__wrapper"><span id="p06_temperatura_pritoka_vody_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Подача</small></div>
+           <div class="display-information__wrapper"><span id="p06_temperatura_obratnoi_vody_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Обратка</small></div>
+           <div class="display-information__wrapper"><span id="p06_workmode_status_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Режим</small></div>
+           <div class="display-information__wrapper"><span id="p06_error_status_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ошибки</small></div>
+           <div class="display-information__wrapper"><span id="p06_actualtemp_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уставка</small></div>
+           <div class="display-information__wrapper"><span id="p06_ustavka_speedfan_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уставка</small></div>
+           <div class="display-information__wrapper"><span id="p06_nagrev_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Нагрев</small></div>
+           <div class="display-information__wrapper"><span id="p06_okhlazhdenie_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Охлаждение</small></div>
+           <div class="display-information__wrapper"><span id="p06_sila_toka_diw" class="text updata-value-information">Loading...</span><small class="small-text text">FC ток</small></div>
+           <div class="display-information__wrapper"><span id="p06_skorost_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Обороты</small></div>
+           <div class="display-information__wrapper"><span id="p06_chastota_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Частота</small></div>
+           <div class="display-information__wrapper"><span id="p06_moshchnost_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Мощность</small></div>
+           <div class="display-information__wrapper"><span id="p06_voltazh_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Вольтаж</small></div>
+           <div class="display-information__wrapper"><span id="p06_narabotka_fansupply_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Наработка</small></div>
+       </div>
+        <!-- Информационное окно END-->
+         <!-- Переключатель ONOFF START-->
+       <div class="wrap__toggle">
+           <div class="wrap__toggle--name text"><span></span><span>Вкл/Выкл</span></div>
+           <div class="wrap__toggle--toggler text"><label class="form-label" for="p06_onoff_toggle"><input type="checkbox" class="checkBox" id="p06_onoff_toggle"><span></span></label></div></div>
+            <!-- Переключатель ONOFF END-->
+             <!-- Выбор режимов Start -->
+       <div class="wrap__toggle radio_button">
+           <div class="form_mode_group text">
+                <div class="form_mode_group-item"><input id="p06-radio-mode-eco" type="radio" name="p06-radio-mode" value="1" checked><label for="p06-radio-mode-eco">Эко</label></div>
+                <div class="form_mode_group-item"><input id="p06-radio-mode-comfort" type="radio" name="p06-radio-mode" value="2"><label for="p06-radio-mode-comfort">Комфорт</label></div>
+                <div class="form_mode_group-item"><input id="p06-radio-mode-optimal" type="radio" name="p06-radio-mode" value="3"><label for="p06-radio-mode-optimal">Оптимальный</label></div>
+              </div>
+         </div>
+          <!-- Выбор режимов END -->
+      <!-- Слайдер Скорости START-->
+        <div class="wrap__slider">
+            <span class="slider-label">Скорость: <span class="slider-value">75</span><span class="slider-unit">%</span></span>
+            <form>
+              <input type="range" min="0" max="100" value="75" list="l" class="slider">
+            </form>
+          </div>
+           <!-- Слайдер Скорости END-->
+      <!-- Слайдер температуры START-->
+        <div class="wrap__slider">
+            <span class="slider-label">Температура: <span class="slider-value">25</span><span class="slider-unit">°С</span></span>
+            <form>
+              <input type="range" min="15" max="30" value="25" list="l" class="slider">
+            </form>
+          </div>
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="display-menu-p07">
+       <!-- Кнопки управления Start-->
+       <div class="wrap__backbutton">
+	        <button class="btn back-btn" type="button" data-toggle="#back_pritochki">Назад</button>
+          <div class="display-backbutton__wrapper">
+	           <span class="text updata-value-information">P07</span>
+           </div>
+           <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Настройки</button>
+         </div>
+        <!-- Кнопки управления END-->
+         <!-- Информационное окно START-->
+       <div class="upmenu-card hide">
+           <div class="display-information__wrapper"><span id="p07_temperatura_naruzhnego_vozdukha_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уличная</small></div>
+           <div class="display-information__wrapper"><span id="p07_temperatura_v_kanale_diw" class="text updata-value-information">Loading...</span><small class="small-text text">В канале</small></div>
+           <div class="display-information__wrapper"><span id="p07_temperatura_pritoka_vody_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Подача</small></div>
+           <div class="display-information__wrapper"><span id="p07_temperatura_obratnoi_vody_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Обратка</small></div>
+           <div class="display-information__wrapper"><span id="p07_workmode_status_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Режим</small></div>
+           <div class="display-information__wrapper"><span id="p07_error_status_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ошибки</small></div>
+           <div class="display-information__wrapper"><span id="p07_actualtemp_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уставка</small></div>
+           <div class="display-information__wrapper"><span id="p07_ustavka_speedfan_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уставка</small></div>
+           <div class="display-information__wrapper"><span id="p07_nagrev_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Нагрев</small></div>
+           <div class="display-information__wrapper"><span id="p07_okhlazhdenie_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Охлаждение</small></div>
+           <div class="display-information__wrapper"><span id="p07_sila_toka_diw" class="text updata-value-information">Loading...</span><small class="small-text text">FC ток</small></div>
+           <div class="display-information__wrapper"><span id="p07_skorost_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Обороты</small></div>
+           <div class="display-information__wrapper"><span id="p07_chastota_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Частота</small></div>
+           <div class="display-information__wrapper"><span id="p07_moshchnost_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Мощность</small></div>
+           <div class="display-information__wrapper"><span id="p07_voltazh_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Вольтаж</small></div>
+           <div class="display-information__wrapper"><span id="p07_narabotka_fansupply_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Наработка</small></div>
+       </div>
+        <!-- Информационное окно END-->
+         <!-- Переключатель ONOFF START-->
+       <div class="wrap__toggle">
+           <div class="wrap__toggle--name text"><span></span><span>Вкл/Выкл</span></div>
+           <div class="wrap__toggle--toggler text"><label class="form-label" for="p07_onoff_toggle"><input type="checkbox" class="checkBox" id="p07_onoff_toggle"><span></span></label></div></div>
+            <!-- Переключатель ONOFF END-->
+             <!-- Выбор режимов Start -->
+       <div class="wrap__toggle radio_button">
+           <div class="form_mode_group text">
+                <div class="form_mode_group-item"><input id="p07-radio-mode-eco" type="radio" name="p07-radio-mode" value="1" checked><label for="p07-radio-mode-eco">Эко</label></div>
+                <div class="form_mode_group-item"><input id="p07-radio-mode-comfort" type="radio" name="p07-radio-mode" value="2"><label for="p07-radio-mode-comfort">Комфорт</label></div>
+                <div class="form_mode_group-item"><input id="p07-radio-mode-optimal" type="radio" name="p07-radio-mode" value="3"><label for="p07-radio-mode-optimal">Оптимальный</label></div>
+              </div>
+         </div>
+          <!-- Выбор режимов END -->
+      <!-- Слайдер Скорости START-->
+        <div class="wrap__slider">
+            <span class="slider-label">Скорость: <span class="slider-value">75</span><span class="slider-unit">%</span></span>
+            <form>
+              <input type="range" min="0" max="100" value="75" list="l" class="slider">
+            </form>
+          </div>
+           <!-- Слайдер Скорости END-->
+      <!-- Слайдер температуры START-->
+        <div class="wrap__slider">
+            <span class="slider-label">Температура: <span class="slider-value">25</span><span class="slider-unit">°С</span></span>
+            <form>
+              <input type="range" min="15" max="30" value="25" list="l" class="slider">
+            </form>
+          </div>
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="display-menu-p08">
+       <!-- Кнопки управления Start-->
+       <div class="wrap__backbutton">
+	        <button class="btn back-btn" type="button" data-toggle="#back_pritochki">Назад</button>
+          <div class="display-backbutton__wrapper">
+	           <span class="text updata-value-information">P08</span>
+           </div>
+           <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Настройки</button>
+         </div>
+        <!-- Кнопки управления END-->
+         <!-- Информационное окно START-->
+       <div class="upmenu-card hide">
+           <div class="display-information__wrapper"><span id="p08_temperatura_naruzhnego_vozdukha_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уличная</small></div>
+           <div class="display-information__wrapper"><span id="p08_temperatura_v_kanale_diw" class="text updata-value-information">Loading...</span><small class="small-text text">В канале</small></div>
+           <div class="display-information__wrapper"><span id="p08_temperatura_pritoka_vody_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Подача</small></div>
+           <div class="display-information__wrapper"><span id="p08_temperatura_obratnoi_vody_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Обратка</small></div>
+           <div class="display-information__wrapper"><span id="p08_workmode_status_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Режим</small></div>
+           <div class="display-information__wrapper"><span id="p08_error_status_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ошибки</small></div>
+           <div class="display-information__wrapper"><span id="p08_actualtemp_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уставка</small></div>
+           <div class="display-information__wrapper"><span id="p08_ustavka_speedfan_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уставка</small></div>
+           <div class="display-information__wrapper"><span id="p08_nagrev_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Нагрев</small></div>
+           <div class="display-information__wrapper"><span id="p08_okhlazhdenie_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Охлаждение</small></div>
+           <div class="display-information__wrapper"><span id="p08_sila_toka_diw" class="text updata-value-information">Loading...</span><small class="small-text text">FC ток</small></div>
+           <div class="display-information__wrapper"><span id="p08_skorost_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Обороты</small></div>
+           <div class="display-information__wrapper"><span id="p08_chastota_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Частота</small></div>
+           <div class="display-information__wrapper"><span id="p08_moshchnost_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Мощность</small></div>
+           <div class="display-information__wrapper"><span id="p08_voltazh_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Вольтаж</small></div>
+           <div class="display-information__wrapper"><span id="p08_narabotka_fansupply_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Наработка</small></div>
+       </div>
+        <!-- Информационное окно END-->
+         <!-- Переключатель ONOFF START-->
+       <div class="wrap__toggle">
+           <div class="wrap__toggle--name text"><span></span><span>Вкл/Выкл</span></div>
+           <div class="wrap__toggle--toggler text"><label class="form-label" for="p08_onoff_toggle"><input type="checkbox" class="checkBox" id="p08_onoff_toggle"><span></span></label></div></div>
+            <!-- Переключатель ONOFF END-->
+             <!-- Выбор режимов Start -->
+       <div class="wrap__toggle radio_button">
+           <div class="form_mode_group text">
+                <div class="form_mode_group-item"><input id="p08-radio-mode-eco" type="radio" name="p08-radio-mode" value="1" checked><label for="p08-radio-mode-eco">Эко</label></div>
+                <div class="form_mode_group-item"><input id="p08-radio-mode-comfort" type="radio" name="p08-radio-mode" value="2"><label for="p08-radio-mode-comfort">Комфорт</label></div>
+                <div class="form_mode_group-item"><input id="p08-radio-mode-optimal" type="radio" name="p08-radio-mode" value="3"><label for="p08-radio-mode-optimal">Оптимальный</label></div>
+              </div>
+         </div>
+          <!-- Выбор режимов END -->
+      <!-- Слайдер Скорости START-->
+        <div class="wrap__slider">
+            <span class="slider-label">Скорость: <span class="slider-value">75</span><span class="slider-unit">%</span></span>
+            <form>
+              <input type="range" min="0" max="100" value="75" list="l" class="slider">
+            </form>
+          </div>
+           <!-- Слайдер Скорости END-->
+      <!-- Слайдер температуры START-->
+        <div class="wrap__slider">
+            <span class="slider-label">Температура: <span class="slider-value">25</span><span class="slider-unit">°С</span></span>
+            <form>
+              <input type="range" min="15" max="30" value="25" list="l" class="slider">
+            </form>
+          </div>
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="display-menu-p10">
+       <!-- Кнопки управления Start-->
+       <div class="wrap__backbutton">
+	        <button class="btn back-btn" type="button" data-toggle="#back_pritochki">Назад</button>
+          <div class="display-backbutton__wrapper">
+	           <span class="text updata-value-information">P10</span>
+           </div>
+           <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Настройки</button>
+         </div>
+        <!-- Кнопки управления END-->
+         <!-- Информационное окно START-->
+       <div class="upmenu-card hide">
+           <div class="display-information__wrapper"><span id="p10_temperatura_naruzhnego_vozdukha_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уличная</small></div>
+           <div class="display-information__wrapper"><span id="p10_temperatura_v_kanale_diw" class="text updata-value-information">Loading...</span><small class="small-text text">В канале</small></div>
+           <div class="display-information__wrapper"><span id="p10_temperatura_pritoka_vody_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Подача</small></div>
+           <div class="display-information__wrapper"><span id="p10_temperatura_obratnoi_vody_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Обратка</small></div>
+           <div class="display-information__wrapper"><span id="p10_workmode_status_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Режим</small></div>
+           <div class="display-information__wrapper"><span id="p10_error_status_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ошибки</small></div>
+           <div class="display-information__wrapper"><span id="p10_actualtemp_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уставка</small></div>
+           <div class="display-information__wrapper"><span id="p10_ustavka_speedfan_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уставка</small></div>
+           <div class="display-information__wrapper"><span id="p10_nagrev_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Нагрев</small></div>
+           <div class="display-information__wrapper"><span id="p10_okhlazhdenie_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Охлаждение</small></div>
+           <div class="display-information__wrapper"><span id="p10_sila_toka_diw" class="text updata-value-information">Loading...</span><small class="small-text text">FC ток</small></div>
+           <div class="display-information__wrapper"><span id="p10_skorost_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Обороты</small></div>
+           <div class="display-information__wrapper"><span id="p10_chastota_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Частота</small></div>
+           <div class="display-information__wrapper"><span id="p10_moshchnost_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Мощность</small></div>
+           <div class="display-information__wrapper"><span id="p10_voltazh_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Вольтаж</small></div>
+           <div class="display-information__wrapper"><span id="p10_narabotka_fansupply_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Наработка</small></div>
+       </div>
+        <!-- Информационное окно END-->
+         <!-- Переключатель ONOFF START-->
+       <div class="wrap__toggle">
+           <div class="wrap__toggle--name text"><span></span><span>Вкл/Выкл</span></div>
+           <div class="wrap__toggle--toggler text"><label class="form-label" for="p10_onoff_toggle"><input type="checkbox" class="checkBox" id="p10_onoff_toggle"><span></span></label></div></div>
+            <!-- Переключатель ONOFF END-->
+             <!-- Выбор режимов Start -->
+       <div class="wrap__toggle radio_button">
+           <div class="form_mode_group text">
+                <div class="form_mode_group-item"><input id="p10-radio-mode-eco" type="radio" name="p10-radio-mode" value="1" checked><label for="p10-radio-mode-eco">Эко</label></div>
+                <div class="form_mode_group-item"><input id="p10-radio-mode-comfort" type="radio" name="p10-radio-mode" value="2"><label for="p10-radio-mode-comfort">Комфорт</label></div>
+                <div class="form_mode_group-item"><input id="p10-radio-mode-optimal" type="radio" name="p10-radio-mode" value="3"><label for="p10-radio-mode-optimal">Оптимальный</label></div>
+              </div>
+         </div>
+          <!-- Выбор режимов END -->
+      <!-- Слайдер Скорости START-->
+        <div class="wrap__slider">
+            <span class="slider-label">Скорость: <span class="slider-value">75</span><span class="slider-unit">%</span></span>
+            <form>
+              <input type="range" min="0" max="100" value="75" list="l" class="slider">
+            </form>
+          </div>
+           <!-- Слайдер Скорости END-->
+      <!-- Слайдер температуры START-->
+        <div class="wrap__slider">
+            <span class="slider-label">Температура: <span class="slider-value">25</span><span class="slider-unit">°С</span></span>
+            <form>
+              <input type="range" min="15" max="30" value="25" list="l" class="slider">
+            </form>
+          </div>
+    </div>
+    <div class="container mainbackground_conteiner hidden" id="display-menu-p11">
+       <!-- Кнопки управления Start-->
+       <div class="wrap__backbutton">
+	        <button class="btn back-btn" type="button" data-toggle="#back_pritochki">Назад</button>
+          <div class="display-backbutton__wrapper">
+	           <span class="text updata-value-information">P11</span>
+           </div>
+           <button class="btn back-btn" type="button" data-toggle="#back_vityajki">Настройки</button>
+         </div>
+        <!-- Кнопки управления END-->
+         <!-- Информационное окно START-->
+       <div class="upmenu-card hide">
+           <div class="display-information__wrapper"><span id="p11_temperatura_naruzhnego_vozdukha_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уличная</small></div>
+           <div class="display-information__wrapper"><span id="p11_temperatura_v_kanale_diw" class="text updata-value-information">Loading...</span><small class="small-text text">В канале</small></div>
+           <div class="display-information__wrapper"><span id="p11_temperatura_pritoka_vody_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Подача</small></div>
+           <div class="display-information__wrapper"><span id="p11_temperatura_obratnoi_vody_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Обратка</small></div>
+           <div class="display-information__wrapper"><span id="p11_workmode_status_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Режим</small></div>
+           <div class="display-information__wrapper"><span id="p11_error_status_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Ошибки</small></div>
+           <div class="display-information__wrapper"><span id="p11_actualtemp_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уставка</small></div>
+           <div class="display-information__wrapper"><span id="p11_ustavka_speedfan_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Уставка</small></div>
+           <div class="display-information__wrapper"><span id="p11_nagrev_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Нагрев</small></div>
+           <div class="display-information__wrapper"><span id="p11_okhlazhdenie_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Охлаждение</small></div>
+           <div class="display-information__wrapper"><span id="p11_sila_toka_diw" class="text updata-value-information">Loading...</span><small class="small-text text">FC ток</small></div>
+           <div class="display-information__wrapper"><span id="p11_skorost_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Обороты</small></div>
+           <div class="display-information__wrapper"><span id="p11_chastota_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Частота</small></div>
+           <div class="display-information__wrapper"><span id="p11_moshchnost_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Мощность</small></div>
+           <div class="display-information__wrapper"><span id="p11_voltazh_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Вольтаж</small></div>
+           <div class="display-information__wrapper"><span id="p11_narabotka_fansupply_diw" class="text updata-value-information">Loading...</span><small class="small-text text">Наработка</small></div>
+       </div>
+        <!-- Информационное окно END-->
+         <!-- Переключатель ONOFF START-->
+       <div class="wrap__toggle">
+           <div class="wrap__toggle--name text"><span></span><span>Вкл/Выкл</span></div>
+           <div class="wrap__toggle--toggler text"><label class="form-label" for="p11_onoff_toggle"><input type="checkbox" class="checkBox" id="p11_onoff_toggle"><span></span></label></div></div>
+            <!-- Переключатель ONOFF END-->
+             <!-- Выбор режимов Start -->
+       <div class="wrap__toggle radio_button">
+           <div class="form_mode_group text">
+                <div class="form_mode_group-item"><input id="p11-radio-mode-eco" type="radio" name="p11-radio-mode" value="1" checked><label for="p11-radio-mode-eco">Эко</label></div>
+                <div class="form_mode_group-item"><input id="p11-radio-mode-comfort" type="radio" name="p11-radio-mode" value="2"><label for="p11-radio-mode-comfort">Комфорт</label></div>
+                <div class="form_mode_group-item"><input id="p11-radio-mode-optimal" type="radio" name="p11-radio-mode" value="3"><label for="p11-radio-mode-optimal">Оптимальный</label></div>
+              </div>
+         </div>
+          <!-- Выбор режимов END -->
+      <!-- Слайдер Скорости START-->
+        <div class="wrap__slider">
+            <span class="slider-label">Скорость: <span class="slider-value">75</span><span class="slider-unit">%</span></span>
+            <form>
+              <input type="range" min="0" max="100" value="75" list="l" class="slider">
+            </form>
+          </div>
+           <!-- Слайдер Скорости END-->
+      <!-- Слайдер температуры START-->
+        <div class="wrap__slider">
+            <span class="slider-label">Температура: <span class="slider-value">25</span><span class="slider-unit">°С</span></span>
+            <form>
+              <input type="range" min="15" max="30" value="25" list="l" class="slider">
+            </form>
+          </div>
+    </div>
+
+    <script src="assets/js/custom.js?v2.2.8"></script>
+</body>
+
+</html>
